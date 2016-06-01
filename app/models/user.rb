@@ -12,12 +12,8 @@ class User < ActiveRecord::Base
 		return User.where(email: email).last if User.where(email: email).exists?
 		return nil if email.nil?
 		where(email: email).first_or_create do |user|
-			user.provider = provider
-			user.uid = profile["id"]
-			user.name = profile["first_name"]
-			user.lastname = profile["last_name"]
-			user.email = profile["email"]
-			user.password = Devise.friendly_token[0,20]
+			user.name = name
+			user.email = email
 		end
 	end
 end
