@@ -79,7 +79,8 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: comuniapp_backend_production
-  username: comuniapp_backend
-  password: <%= ENV['COMUNIAPP_BACKEND_DATABASE_PASSWORD'] %>
+  host: ec2-54-243-204-129.compute-1.amazonaws.com
+  database: d1hsnpjjil2ru9
+  username: fnoozuhaddkvzg
+  password: FzZLQTQQINaJxVmc_2Bq_TxoAi
+  port: 5432
