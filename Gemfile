@@ -24,6 +24,12 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 # gem for render json
 gem 'rabl-rails'
+# gem for cors
+gem 'rack-cors', :require => 'rack/cors'
+# gem for angular
+gem 'angularjs-rails'
+gem 'bower-rails'
+gem 'angular-rails-templates'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
