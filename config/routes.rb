@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  namespace :api do
+  get 'publications/index'
+  end
+
+  namespace :api do
+  get 'publications/show'
+  end
+
   get 'welcome/index'
 
   namespace :api do
