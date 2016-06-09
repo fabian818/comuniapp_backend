@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   namespace :api do
-  get 'publications/index'
-  end
-
-  namespace :api do
-  get 'publications/show'
+    get 'publications/index'
+    get 'publications/show'
+    get 'publications/create'
+    get 'publications/update'
+    get 'publications/destroy'
   end
 
   get 'welcome/index'
@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   end
 
   get '/' => 'welcome#index'
-  
+
   get '*path' => 'application#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
