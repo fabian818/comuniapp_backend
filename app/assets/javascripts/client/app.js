@@ -12,6 +12,31 @@ angular.module('comuniapp', ['LocalStorageModule',
 		controller: 'HomeController',
 	})
 
+	.state('index', {
+		url: '/publications/index',
+		templateUrl:'publications/index.html',
+		controller: 'IndexController',
+	})
+
+	.state('edit', {
+		url: '/publications/edit/:publicationid',
+		templateUrl:'publications/edit.html',
+		controller: 'EditController'
+		})
+
+	.state('new', {
+		url: '/publications/new',
+		templateUrl:'publications/new.html',
+		controller: 'NewController',
+	})
+
+	.state('show', {
+		url: '/publications/show/:publicationid',
+		templateUrl:'publications/show.html',
+		controller: 'ShowController'
+		})
+
+
 
 
 	$urlRouterProvider.otherwise('/');
