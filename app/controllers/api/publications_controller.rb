@@ -21,8 +21,8 @@ class Api::PublicationsController < ApplicationController
 
 	def update
 		@publication = Publication.find(params[:publication_id])
-		@publication.update(title: params[:title], body: params[:body], image_url: params[:image_url], has_image: params[:has_image])
-		puts @publication.errors.messages
+		render json: @publication.update(title: params[:title], body: params[:body], image_url: params[:image_url], has_image: params[:has_image])
+		# puts @publication.errors.messages
 	end	
 
 	def destroy
