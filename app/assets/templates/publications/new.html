@@ -1,6 +1,5 @@
-
 <div id="body">
-<form  ng-submit="send()">
+	<form  ng-submit="send()">
 		Titulo: <input ng-model="publication.title" type="text" name="title" /><br />
 		Cuerpo: <input ng-model="publication.body" type="text" name="body" /><br />
 		Url de imagen: <input ng-model="publication.image_url" type="text" name="image_url" /><br />
@@ -8,3 +7,5 @@
 		<input type="submit" name="enviar" value="Enviar">
 	</form>
 </div>
+
+<a ui-sref="index">Lista de publicaciones</a>

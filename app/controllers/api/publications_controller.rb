@@ -26,11 +26,16 @@ class Api::PublicationsController < ApplicationController
 	end	
 
 	def destroy
-		@publication = Publication.find(params[:publication_id])
-		@publication.destroy
-		render json: true
-		puts @publication.errors.messages
+		begin
+			@publication = Publication.find(params[:publication_id]).destroy
+			if @publication.destroyed?
+				render json: true
+			else
+				render json: false
+			end
+		rescue
+			render json: false
+		end
 	end
-
 end
 
