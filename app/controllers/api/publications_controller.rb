@@ -14,7 +14,7 @@ class Api::PublicationsController < ApplicationController
 	def create
 		puts 'estoy en create'
 		@publication = Publication.new(title: params[:title],
-			body: params[:body], image_url: params[:image_url], has_image: params[:has_image], created_at: params[:created_at])
+			body: params[:body], image_url: params[:image_url], has_image: params[:has_image])
 		@publication.save
 		puts @publication.errors.messages
 	end

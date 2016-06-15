@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
   namespace :api do
+    get 'questions/index'
+    get 'questions/show'
+    get 'questions/create'
+    get 'questions/update'
+    get 'questions/destroy'
+  end
+
+  namespace :api do
     get 'publications/index'
     get 'publications/show'
     get 'publications/create'
