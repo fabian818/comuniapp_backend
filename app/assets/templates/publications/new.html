@@ -1,9 +1,10 @@
 
 <div id="body">
-<form  ng-submit="publication" method="get" action="">
-Titulo: <input type="text" name="title" /><br />
-Cuerpo: <input type="text" name="body" /><br />
-Url de imagen: <input type="text" name="image_url" /><br />
-TIene imagen: <input type="text" name="has_image" /><br />
-</form>
+<form  ng-submit="send()">
+		Titulo: <input ng-model="publication.title" type="text" name="title" /><br />
+		Cuerpo: <input ng-model="publication.body" type="text" name="body" /><br />
+		Url de imagen: <input ng-model="publication.image_url" type="text" name="image_url" /><br />
+		TIene imagen: <input ng-model="publication.has_image" type="text" name="has_image" /><br />
+		<input type="submit" name="enviar" value="Enviar">
+	</form>
 </div>

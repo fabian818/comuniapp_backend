@@ -1,3 +1,5 @@
 <ul type='circle'>
-	<li ng-repeat="publication in publications"> {{publication.title}}</li>
+	<li ng-repeat="publication in publications"> {{publication.title}} 
+		<a href ng-click="destroy(publication.id)">Eliminar</a>
+	</li>
 </ul>	

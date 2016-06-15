@@ -11,9 +11,9 @@
 
         service.index = index;
         service.show = show;
-        // service.create = create;
-        // service.update = update;
-        // service.destroy = destroy;
+        service.create = create;
+        service.update = update;
+        service.destroy = destroy;
 
         return service;
 
@@ -49,8 +49,10 @@
             });
         }
 
-        function update(callback) {
-         $http.get('/api/publications/update.json?publication_id=' + publication_id)
+        function update(publication, callback) {
+         $http.get('/api/publications/update.json?publication_id=' + publication.id + '&title=' + publication.title + '&body=' + 
+                publication.body + '&image_url=' + publication.image_url + '&has_image=' + 
+                publication.has_image)
          .success(function (response) {
             callback(response);
         })
@@ -59,7 +61,7 @@
         });
      }
 
-     function destroy(callback) {
+     function destroy(publication_id, callback) {
         $http.get('/api/publications/destroy.json?publication_id=' + publication_id)
         .success(function (response) {
             callback(response);
