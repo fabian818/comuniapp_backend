@@ -13,3 +13,38 @@
  *= require_tree .
  *= require_self
  */
+ .buttondemoBasicUsage section {
+ 	background: #f7f7f7;
+ 	border-radius: 3px;
+ 	text-align: center;
+ 	margin: 1em;
+ 	position: relative !important;
+ 	padding-bottom: 10px; 
+ }
+ .buttondemoBasicUsage md-content {
+ 	margin-right: 7px; 
+ }
+ .buttondemoBasicUsage section .md-button {
+ 	margin-top: 16px;
+ 	margin-bottom: 16px; 
+ }
+ .buttondemoBasicUsage .label {
+ 	position: absolute;
+ 	bottom: 5px;
+ 	left: 7px;
+ 	font-size: 14px;
+ 	opacity: 0.54; 
+ }
+
+ .form-padding{
+ 	padding: 20px 20px 20px 20px;
+ }
+
+ .black{
+ 	color: #000 !important;
+ }
+ p {
+ 	text-align: justify;
+ 	text-justify: inter-word;
+ 	display: inline-block;
+ }

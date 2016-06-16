@@ -2,6 +2,7 @@ angular.module('comuniapp', ['LocalStorageModule',
 	'ngRoute',
 	'ui.router',
 	'templates',
+	'ngMaterial'
 	])
 .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function ($stateProvider, $urlRouterProvider, $locationProvider) {
 	$stateProvider
@@ -39,7 +40,7 @@ angular.module('comuniapp', ['LocalStorageModule',
 
 
 
-	$urlRouterProvider.otherwise('/');
+	$urlRouterProvider.otherwise('/publications/index');
 
 	$locationProvider.html5Mode({
 		enabled: true,
