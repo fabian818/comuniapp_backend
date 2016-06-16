@@ -1,6 +1,6 @@
 (function () {
 	'use strict';
-	angular.module('comuniapp').controller('IndexController', ['$scope', '$state', '$stateParams','QuestionService', function ($scope, $state, $stateParams, QuestionService) {
+	angular.module('comuniapp').controller('QuestionsIndexController', ['$scope', '$state', '$stateParams','QuestionService', function ($scope, $state, $stateParams, QuestionService) {
 		QuestionService.index(function(data){
 			$scope.questions = data.questions;
 		}); 

@@ -1,7 +1,7 @@
 (function () {
 	'use strict';
 
-	angular.module('comuniapp').controller('NewController', ['$scope', '$state', '$stateParams', 'QuestionService', function ($scope, $state, $stateParams, QuestionService) {
+	angular.module('comuniapp').controller('QuestionsNewController', ['$scope', '$state', '$stateParams', 'QuestionService', function ($scope, $state, $stateParams, QuestionService) {
 		$scope.question = ""
 		$scope.send = function(){
 			QuestionService.create($scope.question, function(data){

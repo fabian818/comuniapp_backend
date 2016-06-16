@@ -23,6 +23,7 @@
 			.filter(function(pos) { return $scope.toastPosition[pos]; })
 			.join(' ');
 		};
+
 		$scope.publication = ""
 		$scope.send = function(){
 			PublicationService.create($scope.publication, function(data){

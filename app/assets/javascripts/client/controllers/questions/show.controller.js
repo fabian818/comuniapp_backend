@@ -1,7 +1,7 @@
 (function () {
 	'use strict';
 
-	angular.module('comuniapp').controller('ShowController', ['$scope', '$state', '$stateParams', 'QuestionService',
+	angular.module('comuniapp').controller('QuestionsShowController', ['$scope', '$state', '$stateParams', 'QuestionService',
 		function ($scope, $state, $stateParams, QuestionService) {
 			var question_id 
 			question_id = $stateParams.questionid 

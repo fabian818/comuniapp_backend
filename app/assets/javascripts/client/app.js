@@ -16,50 +16,50 @@ angular.module('comuniapp', ['LocalStorageModule',
 	.state('publications-index', {
 		url: '/publications/index',
 		templateUrl:'publications/index.html',
-		controller: 'IndexController',
+		controller: 'PublicationsIndexController',
 	})
 
 	.state('publications-edit', {
 		url: '/publications/edit/:publicationid',
 		templateUrl:'publications/edit.html',
-		controller: 'EditController'
+		controller: 'PublicationsEditController'
 		})
 
 	.state('publications-new', {
 		url: '/publications/new',
 		templateUrl:'publications/new.html',
-		controller: 'NewController',
+		controller: 'PublicationsNewController',
 	})
 
 	.state('publications-show', {
 		url: '/publications/show/:publicationid',
 		templateUrl:'publications/show.html',
-		controller: 'ShowController'
+		controller: 'PublicationsShowController'
 		})
 
 
 	.state('questions-index', {
 		url: '/questions/index',
 		templateUrl:'questions/index.html',
-		controller: 'IndexController',
+		controller: 'QuestionsIndexController',
 	})
 
 	.state('questions-edit', {
 		url: '/questions/edit/:publicationid',
 		templateUrl:'questions/edit.html',
-		controller: 'EditController'
+		controller: 'QuestionsEditController'
 		})
 
 	.state('questions-new', {
 		url: '/questions/new',
 		templateUrl:'questions/new.html',
-		controller: 'NewController',
+		controller: 'QuestionsNewController',
 	})
 
 	.state('questions-show', {
 		url: '/questions/show/:publicationid',
 		templateUrl:'questions/show.html',
-		controller: 'ShowController'
+		controller: 'QuestionsShowController'
 		})
 
 
