@@ -45,7 +45,7 @@ angular.module('comuniapp', ['LocalStorageModule',
 	})
 
 	.state('questions-edit', {
-		url: '/questions/edit/:publicationid',
+		url: '/questions/edit/:questionid',
 		templateUrl:'questions/edit.html',
 		controller: 'QuestionsEditController'
 		})
@@ -57,7 +57,7 @@ angular.module('comuniapp', ['LocalStorageModule',
 	})
 
 	.state('questions-show', {
-		url: '/questions/show/:publicationid',
+		url: '/questions/show/:questionid',
 		templateUrl:'questions/show.html',
 		controller: 'QuestionsShowController'
 		})
