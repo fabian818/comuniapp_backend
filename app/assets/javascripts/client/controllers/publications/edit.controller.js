@@ -25,6 +25,7 @@
 				.join(' ');
 			};
 			$scope.publication = ""
+
 			var publication_id = $stateParams.publicationid;
 			PublicationService.show(publication_id, function(data){
 				console.log(data);

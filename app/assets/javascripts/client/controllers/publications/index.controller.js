@@ -1,5 +1,6 @@
 (function () {
 	'use strict';
+
 	angular.module('comuniapp').controller('IndexController', ['$scope', '$mdDialog', '$mdToast', '$state', '$stateParams','PublicationService', function ($scope, $mdDialog, $mdToast, $state, $stateParams, PublicationService) {
 		function sanitizePosition() {
 			var current = $scope.toastPosition;
@@ -22,6 +23,7 @@
 			.filter(function(pos) { return $scope.toastPosition[pos]; })
 			.join(' ');
 		};
+
 		PublicationService.index(function(data){
 			$scope.publications = data.publications;
 		}); 
