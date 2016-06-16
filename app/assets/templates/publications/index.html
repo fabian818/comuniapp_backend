@@ -17,10 +17,10 @@
 		<div flex="10">
 		</div>
 		<div flex="60">
-			<md-button class="md-primary black" ui-sref="show({publicationid: publication.id})">{{ publication.title }}</md-button>
+			<md-button class="md-primary black" ui-sref="publications-show({publicationid: publication.id})">{{ publication.title }}</md-button>
 		</div>
 		<div flex="10">
-			<md-button class="md-raised" ui-sref="edit({publicationid: publication.id})">Editar</md-button>
+			<md-button class="md-raised" ui-sref="publications-edit({publicationid: publication.id})">Editar</md-button>
 		</div>
 		<div flex="10">
 			<md-button ng-click="destroy(publication, $event)" class="md-fab" aria-label="Eat cake">

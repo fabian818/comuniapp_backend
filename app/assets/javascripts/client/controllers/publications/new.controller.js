@@ -1,7 +1,7 @@
 (function () {
 	'use strict';
 
-	angular.module('comuniapp').controller('NewController', ['$scope', '$mdToast', '$state', '$stateParams', 'PublicationService', function ($scope, $mdToast, $state, $stateParams, PublicationService) {
+	angular.module('comuniapp').controller('PublicationsNewController', ['$scope', '$mdToast', '$state', '$stateParams', 'PublicationService', function ($scope, $mdToast, $state, $stateParams, PublicationService) {
 		function sanitizePosition() {
 			var current = $scope.toastPosition;
 			if ( current.bottom && last.top ) current.top = false;
