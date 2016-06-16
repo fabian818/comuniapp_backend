@@ -1,7 +1,37 @@
 <div id="body">
-<form  ng-submit="send()">
-		Titulo: <input ng-model="question.title" type="text" name="title" /><br />
-		Respuesta: <input ng-model="question.answer" type="text" name="answer" /><br />
-		<input type="submit" name="enviar" value="Enviar">
+	<md-subheader class="md-no-sticky">
+		<div style="display: table; overflow: hidden; margin-left: 400px;" layout="row">
+			<div flex="10">
+			</div>
+			<div style="display: table-cell; vertical-align: middle;" flex="40">
+				Crear una nueva guia o pregunta.
+			</div>
+			<div flex="40">
+				<md-button class="md-raised md-primary" ui-sref="questions-index">Regresar a lista de guias</md-button>
+			</div>
+			<div flex="10">
+			</div>
+		</div>
+	</md-subheader>
+	<form ng-submit="send()">
+		<div layout="row">
+			<div flex="25"></div>
+			<div flex="50">
+				<md-card class="form-padding">
+					<md-input-container class="md-block">
+						<label>Titulo</label>
+						<input ng-model="question.title">
+					</md-input-container>
+					<md-input-container class="md-block">
+						<label>Respuesta</label>
+						<textarea ng-model="question.answer" md-maxlength="500" rows="5" md-select-on-focus></textarea>
+					</md-input-container>
+					<div layout="row">
+						<md-button type="submit" class="md-raised md-primary" flex="100">Crear</md-button>
+					</div>
+				</md-card>
+			</div>
+			<div flex="25"></div>
+		</div>
 	</form>
 </div>

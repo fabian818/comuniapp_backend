@@ -1,7 +1,7 @@
 (function () {
 	'use strict';
 
-	angular.module('comuniapp').controller('EditController', ['$scope', '$mdToast', '$state', '$stateParams','PublicationService',
+	angular.module('comuniapp').controller('PublicationsEditController', ['$scope', '$mdToast', '$state', '$stateParams','PublicationService',
 		function ($scope, $mdToast, $state, $stateParams, PublicationService) {
 			function sanitizePosition() {
 				var current = $scope.toastPosition;
