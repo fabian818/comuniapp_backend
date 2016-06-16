@@ -1,11 +1,45 @@
 <div id="body">
-	<form  ng-submit="send()">
-		Titulo: <input ng-model="publication.title" type="text" name="title" /><br />
-		Cuerpo: <input ng-model="publication.body" type="text" name="body" /><br />
-		Url de imagen: <input ng-model="publication.image_url" type="text" name="image_url" /><br />
-		TIene imagen: <input ng-model="publication.has_image" type="text" name="has_image" /><br />
-		<input type="submit" name="enviar" value="Enviar">
+	<md-subheader class="md-no-sticky">
+		<div style="display: table; overflow: hidden; margin-left: 400px;" layout="row">
+			<div flex="10">
+			</div>
+			<div style="display: table-cell; vertical-align: middle;" flex="40">
+				Crear una nueva publicacion.
+			</div>
+			<div flex="40">
+				<md-button class="md-raised md-primary" ui-sref="index">Regresar a lista de publicaciones</md-button>
+			</div>
+			<div flex="10">
+			</div>
+		</div>
+	</md-subheader>
+	<form ng-submit="send()">
+		<div layout="row">
+			<div flex="25"></div>
+			<div flex="50">
+				<md-card class="form-padding">
+					<md-input-container class="md-block">
+						<label>Titulo</label>
+						<input ng-model="publication.title">
+					</md-input-container>
+					<md-input-container class="md-block">
+						<label>Cuerpo</label>
+						<textarea ng-model="publication.body" md-maxlength="500" rows="5" md-select-on-focus></textarea>
+					</md-input-container>
+					<md-input-container class="md-block">
+						<label>Url de imagen</label>
+						<input ng-model="publication.image_url">
+					</md-input-container>
+					<md-checkbox ng-model="publication.has_image" aria-label="Checkbox 1">
+						¿Tiene imagen?
+					</md-checkbox>
+					<br>
+					<div layout="row">
+						<md-button type="submit" class="md-raised md-primary" flex="100">Crear</md-button>
+					</div>
+				</md-card>
+			</div>
+			<div flex="25"></div>
+		</div>
 	</form>
 </div>
-
-<a ui-sref="index">Lista de publicaciones</a>

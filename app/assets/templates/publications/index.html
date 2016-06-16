@@ -1,8 +1,33 @@
-<ul type='circle'>
-	<li ng-repeat="publication in publications"> {{publication.title}}
-		<a href ng-click="destroy(publication)">Eliminar</a>
-		<a ui-sref="edit({publicationid: publication.id})">Editar</a>
-	</li>
-</ul>
-
-<a ui-sref="new">Crear nueva publicacion</a>
+<md-subheader class="md-no-sticky">
+	<div style="display: table; overflow: hidden; margin-left: 400px;" layout="row">
+		<div flex="10">
+		</div>
+		<div style="display: table-cell; vertical-align: middle;" flex="40">
+			Lista de publicaciones que aparecen en la app
+		</div>
+		<div flex="40">
+			<md-button class="md-raised md-primary" ui-sref="new">Crear nueva publicacion</md-button>
+		</div>
+		<div flex="10">
+		</div>
+	</div>
+</md-subheader>
+<md-list flex ng-cloak>
+	<md-list-item ng-repeat="publication in publications" layout="row">
+		<div flex="10">
+		</div>
+		<div flex="60">
+			<md-button class="md-primary black" ui-sref="show({publicationid: publication.id})">{{ publication.title }}</md-button>
+		</div>
+		<div flex="10">
+			<md-button class="md-raised" ui-sref="edit({publicationid: publication.id})">Editar</md-button>
+		</div>
+		<div flex="10">
+			<md-button ng-click="destroy(publication, $event)" class="md-fab" aria-label="Eat cake">
+				X
+			</md-button>
+		</div>
+		<div flex="10">
+		</div>
+	</md-list-item>
+</md-list>

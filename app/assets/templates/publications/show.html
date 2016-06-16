@@ -1,8 +1,39 @@
-<ul type=circle>
-<li>Titulo : {{publication.title}}</li>
-<li>Cuerpo : {{publication.body}}</li>
-<li>Url de imagen : {{publication.image_url}}</li>
-<li>Tiene imagen : {{publication.has_image}}</li>
-<li>Creado en : {{publication.created_at}}</li>
-<li>Modificado : {{publication.updated_at}}</li>
-</ul>
+<md-subheader class="md-no-sticky">
+	<div style="display: table; overflow: hidden; margin-left: 400px;" layout="row">
+		<div flex="10">
+		</div>
+		<div style="display: table-cell; vertical-align: middle;" flex="40">
+			Vista detallada de la publicacion.
+		</div>
+		<div flex="40">
+			<md-button class="md-raised md-primary" ui-sref="index">Regresar a lista de publicaciones</md-button>
+		</div>
+		<div flex="10">
+		</div>
+	</div>
+</md-subheader>
+<md-content class="md-padding" layout-xs="column" layout="row">
+	<div flex="25"></div>
+	<div flex-xs flex-gt-xs="50" layout="column">
+		<md-card>
+			<md-card-title>
+				<md-card-title-text layout-align="center center">
+					<span class="md-headline">{{publication.title}}</span>
+				</md-card-title-text>
+			</md-card-title>
+			<md-card-content>
+				<h3>Cuerpo</h3>
+				<p>{{publication.body}}</p>
+			</md-card-content>
+			<md-card-content>
+				<h3>Url de imagen</h3>
+				<p>{{publication.image_url}}</p>
+			</md-card-content>
+			<md-card-content>
+				<h3>¿Tiene imagen?</h3>
+				<p>{{publication.has_image}}</p>
+			</md-card-content>
+		</md-card>
+	</div>
+	<div flex="25"></div>
+</md-content>
