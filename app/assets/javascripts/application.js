@@ -9,9 +9,6 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-/*
-//@ sourceMappingURL=angular-route.min.js.map
-*/
 //
 //= require jquery
 //= require jquery_ujs

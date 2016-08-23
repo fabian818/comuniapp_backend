@@ -38,9 +38,8 @@
         }
 
         function create(publication, callback) {
-            $http.get('/api/publications/create.json?title=' + publication.title + '&body=' + 
-                publication.body + '&image_url=' + publication.image_url + '&has_image=' + 
-                publication.has_image)
+            $http.get('/api/publications/create.json?title=' + publication.title + '&image_url=' + publication.image_url + '&has_image=' + 
+                publication.has_image + '&body=' + publication.body)
             .success(function (response) {
                 callback(response);
             })
