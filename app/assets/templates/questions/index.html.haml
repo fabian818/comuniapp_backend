@@ -1,33 +1,19 @@
-<md-subheader class="md-no-sticky">
-	<div style="display: table; overflow: hidden; margin-left: 400px;" layout="row">
-		<div flex="10">
-		</div>
-		<div style="display: table-cell; vertical-align: middle;" flex="40">
-			Lista de guias y preguntas que aparecen en la app
-		</div>
-		<div flex="40">
-			<md-button class="md-raised md-primary" ui-sref="questions-new">Crear nueva guia</md-button>
-		</div>
-		<div flex="10">
-		</div>
-	</div>
-</md-subheader>
-<md-list flex ng-cloak>
-	<md-list-item ng-repeat="question in questions" layout="row">
-		<div flex="10">
-		</div>
-		<div flex="60">
-			<md-button class="md-primary black" ui-sref="questions-show({questionid: question.id})">{{ question.title }}</md-button>
-		</div>
-		<div flex="10">
-			<md-button class="md-raised" ui-sref="questions-edit({questionid: question.id})">Editar</md-button>
-		</div>
-		<div flex="10">
-			<md-button ng-click="destroy(question, $event)" class="md-fab" aria-label="Eat cake">
-				X
-			</md-button>
-		</div>
-		<div flex="10">
-		</div>
-	</md-list-item>
-</md-list>
+%md-subheader.md-no-sticky
+  %div{:layout => "row", :style => "display: table; overflow: hidden; margin-left: 400px;"}
+    %div{:flex => "10"}
+    %div{:flex => "40", :style => "display: table-cell; vertical-align: middle;"}
+      Lista de guias y preguntas que aparecen en la app
+    %div{:flex => "40"}
+      %md-button.md-raised.md-primary{"ui-sref" => "questions-new"} Crear nueva guia
+    %div{:flex => "10"}
+%md-list{:flex => "", "ng-cloak" => ""}
+  %md-list-item{:layout => "row", "ng-repeat" => "question in questions"}
+    %div{:flex => "10"}
+    %div{:flex => "60"}
+      %md-button.md-primary.black{"ui-sref" => "questions-show({questionid: question.id})"} {{ question.title }}
+    %div{:flex => "10"}
+      %md-button.md-raised{"ui-sref" => "questions-edit({questionid: question.id})"} Editar
+    %div{:flex => "10"}
+      %md-button.md-fab{"aria-label" => "Eat cake", "ng-click" => "destroy(question, $event)"}
+        X
+    %div{:flex => "10"}

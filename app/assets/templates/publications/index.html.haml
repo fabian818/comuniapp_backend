@@ -1,33 +1,19 @@
-<md-subheader class="md-no-sticky">
-	<div style="display: table; overflow: hidden; margin-left: 400px;" layout="row">
-		<div flex="10">
-		</div>
-		<div style="display: table-cell; vertical-align: middle;" flex="40">
-			Lista de publicaciones que aparecen en la app
-		</div>
-		<div flex="40">
-			<md-button class="md-raised md-primary" ui-sref="publications-new">Crear nueva publicacion</md-button>
-		</div>
-		<div flex="10">
-		</div>
-	</div>
-</md-subheader>
-<md-list flex ng-cloak>
-	<md-list-item ng-repeat="publication in publications" layout="row">
-		<div flex="10">
-		</div>
-		<div flex="60">
-			<md-button class="md-primary black" ui-sref="publications-show({publicationid: publication.id})">{{ publication.title }}</md-button>
-		</div>
-		<div flex="10">
-			<md-button class="md-raised" ui-sref="publications-edit({publicationid: publication.id})">Editar</md-button>
-		</div>
-		<div flex="10">
-			<md-button ng-click="destroy(publication, $event)" class="md-fab" aria-label="Eat cake">
-				X
-			</md-button>
-		</div>
-		<div flex="10">
-		</div>
-	</md-list-item>
-</md-list>
+%md-subheader.md-no-sticky
+  %div{:layout => "row", :style => "display: table; overflow: hidden; margin-left: 400px;"}
+    %div{:flex => "10"}
+    %div{:flex => "40", :style => "display: table-cell; vertical-align: middle;"}
+      Lista de publicaciones que aparecen en la app
+    %div{:flex => "40"}
+      %md-button.md-raised.md-primary{"ui-sref" => "publications-new"} Crear nueva publicacion
+    %div{:flex => "10"}
+%md-list{:flex => "", "ng-cloak" => ""}
+  %md-list-item{:layout => "row", "ng-repeat" => "publication in publications"}
+    %div{:flex => "10"}
+    %div{:flex => "60"}
+      %md-button.md-primary.black{"ui-sref" => "publications-show({publicationid: publication.id})"} {{ publication.title }}
+    %div{:flex => "10"}
+      %md-button.md-raised{"ui-sref" => "publications-edit({publicationid: publication.id})"} Editar
+    %div{:flex => "10"}
+      %md-button.md-fab{"aria-label" => "Eat cake", "ng-click" => "destroy(publication, $event)"}
+        X
+    %div{:flex => "10"}
