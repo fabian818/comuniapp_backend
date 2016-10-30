@@ -1,0 +1,23 @@
+#body
+  %md-subheader.md-no-sticky
+    %div{:layout => "row", :style => "display: table; overflow: hidden; margin-left: 400px;"}
+      %div{:flex => "10"}
+      %div{:flex => "40", :style => "display: table-cell; vertical-align: middle;"}
+        Crear una nueva guia o pregunta.
+      %div{:flex => "40"}
+        %md-button.md-raised.md-primary{"ui-sref" => "questions-index"} Regresar a lista de guias
+      %div{:flex => "10"}
+  %form{"ng-submit" => "send()"}
+    %div{:layout => "row"}
+      %div{:flex => "25"}
+      %div{:flex => "50"}
+        %md-card.form-padding
+          %md-input-container.md-block
+            %label Titulo
+            %input{"ng-model" => "question.title"}/
+          %md-input-container.md-block
+            %label Respuesta
+            %textarea{"md-maxlength" => "1000", "md-select-on-focus" => "", "ng-model" => "question.answer", :rows => "5"}
+          %div{:layout => "row"}
+            %md-button.md-raised.md-primary{:flex => "100", :type => "submit"} Crear
+      %div{:flex => "25"}

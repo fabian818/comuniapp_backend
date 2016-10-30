@@ -10,7 +10,8 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
+ *= require font-awesome
+ *= require app/styles
  *= require_self
  */
  .buttondemoBasicUsage section {
@@ -19,21 +20,21 @@
  	text-align: center;
  	margin: 1em;
  	position: relative !important;
- 	padding-bottom: 10px; 
+ 	padding-bottom: 10px;
  }
  .buttondemoBasicUsage md-content {
- 	margin-right: 7px; 
+ 	margin-right: 7px;
  }
  .buttondemoBasicUsage section .md-button {
  	margin-top: 16px;
- 	margin-bottom: 16px; 
+ 	margin-bottom: 16px;
  }
  .buttondemoBasicUsage .label {
  	position: absolute;
  	bottom: 5px;
  	left: 7px;
  	font-size: 14px;
- 	opacity: 0.54; 
+ 	opacity: 0.54;
  }
 
  .form-padding{

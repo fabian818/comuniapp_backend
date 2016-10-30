@@ -1,0 +1,19 @@
+%md-subheader.md-no-sticky
+  %div{:layout => "row", :style => "display: table; overflow: hidden; margin-left: 400px;"}
+    %div{:flex => "10"}
+    %div{:flex => "40", :style => "display: table-cell; vertical-align: middle;"}
+      Lista de publicaciones que aparecen en la app
+    %div{:flex => "40"}
+      %md-button.md-raised.md-primary{"ui-sref" => "publications-new"} Crear nueva publicacion
+    %div{:flex => "10"}
+%md-list{:flex => "", "ng-cloak" => ""}
+  %md-list-item{:layout => "row", "ng-repeat" => "publication in publications"}
+    %div{:flex => "10"}
+    %div{:flex => "60"}
+      %md-button.md-primary.black{"ui-sref" => "publications-show({publicationid: publication.id})"} {{ publication.title }}
+    %div{:flex => "10"}
+      %md-button.md-raised{"ui-sref" => "publications-edit({publicationid: publication.id})"} Editar
+    %div{:flex => "10"}
+      %md-button.md-fab{"aria-label" => "Eat cake", "ng-click" => "destroy(publication, $event)"}
+        X
+    %div{:flex => "10"}

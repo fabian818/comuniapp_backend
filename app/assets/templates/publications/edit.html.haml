@@ -1,0 +1,29 @@
+#body
+  %md-subheader.md-no-sticky
+    %div{:layout => "row", :style => "display: table; overflow: hidden; margin-left: 400px;"}
+      %div{:flex => "10"}
+      %div{:flex => "40", :style => "display: table-cell; vertical-align: middle;"}
+        Editar la nueva publicacion seleccionada.
+      %div{:flex => "40"}
+        %md-button.md-raised.md-primary{"ui-sref" => "publications-index"} Regresar a lista de publicaciones
+      %div{:flex => "10"}
+  %form{"ng-submit" => "send()"}
+    %div{:layout => "row"}
+      %div{:flex => "25"}
+      %div{:flex => "50"}
+        %md-card.form-padding
+          %md-input-container.md-block
+            %label Titulo
+            %input{"ng-model" => "publication.title"}/
+          %md-input-container.md-block
+            %label Cuerpo
+            %textarea{"md-maxlength" => "500", "md-select-on-focus" => "", "ng-model" => "publication.body", :rows => "5"}
+          %md-input-container.md-block
+            %label Url de imagen
+            %input{"ng-model" => "publication.image_url"}/
+          %md-checkbox{"aria-label" => "Checkbox 1", "ng-model" => "publication.has_image"}
+            ¿Tiene imagen?
+          %br/
+          %div{:layout => "row"}
+            %md-button.md-raised.md-primary{:flex => "100", :type => "submit"} Modificar
+      %div{:flex => "25"}
