@@ -1,0 +1,25 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title ComuniappBackend
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    / tag for angular material
+    %link{:href => "http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css", :rel => "stylesheet"}/
+    / end
+  %body{"ng-app" => "comuniapp"}
+    %md-toolbar
+      .md-toolbar-tools
+        %span
+          %a{"ui-sref" => "home"} COMUNIDAD SAN LUISANA
+        %md-button.md-button{"aria-label" => "Publicaciones", "ui-sref" => "publications-index"}
+          Publicaciones
+        %md-button.md-button{"aria-label" => "Publicaciones", "ui-sref" => "questions-index"}
+          Preguntas
+    .main-view-container{"ui-view" => ""}
+    %script{:src => "http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"}
+    %script{:src => "http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"}
+    %script{:src => "http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"}
+    %script{:src => "http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"}
