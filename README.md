@@ -1,29 +1,28 @@
-# README #
+# Comuniapp
 
-This README would normally document whatever steps are necessary to get your application up and running.
+La app que te informará y responderá tus dudas sobre los sucesos dentro de la universidad "San Luis Gonzaga"
 
-### What is this repository for? ###
+## Web Services
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+## USUARIO
 
-### How do I get set up? ###
++ facebook -> /api/users/facebook.json?token=
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+## PUBLICACIONES
 
-### Contribution guidelines ###
++ index -> http://comuniapp.herokuapp.com/api/publications/index.json /* muestra todas las publicaciones */
++ show -> http://comuniapp.herokuapp.com/api/publications/show.json?publication_id= /* muestra una publicacion en especifico */
++ create -> http://comuniapp.herokuapp.com/api/publications/create.json?title=''&body=''&image_url=''&has_image=false/true /* crea una publicacion */
++ update -> http://comuniapp.herokuapp.com/api/publications/update.json?publication_id=&title=''&body=''&image_url=''&has_image=false/true /* modifica la publicacion buscada por su id*/
++ destroy -> http://comuniapp.herokuapp.com/api/publications/destroy.json?publication_id= /* elimina una publicacion buscada */
 
-* Writing tests
-* Code review
-* Other guidelines
+## PREGUNTAS
 
-### Who do I talk to? ###
++ index -> http://comuniapp.herokuapp.com/api/questions/index.json /* muestra todas las preguntas */
++ show -> http://comuniapp.herokuapp.com/api/questions/show.json?question_id= /* muestra una pregunta en especifico */
++ create -> http://comuniapp.herokuapp.com/api/questions/create.json?title=''&body=''&answer='' /* crea una pregunta */
++ update -> http://comuniapp.herokuapp.com/api/questions/update.json?question_id=&title=''&answer=''/* modifica la pregunta buscada por su id*/
++ destroy -> http://comuniapp.herokuapp.com/api/questions/destroy.json?question_id= /* elimina una pregunta buscada */
 
-* Repo owner or admin
-* Other community or team contact
+
+good luck hoes! c:
