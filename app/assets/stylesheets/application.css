@@ -12,6 +12,7 @@
  *
  *= require font-awesome
  *= require app/styles
+ *= require bxslider
  *= require_self
  */
  .buttondemoBasicUsage section {

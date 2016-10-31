@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bxslider
 //= require turbolinks
 //= require angular
 //= require angular-rails-templates
