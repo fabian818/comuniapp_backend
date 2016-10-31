@@ -1,1 +1,88 @@
-h1 { font-size: 30px;}
+.text {
+  @include m(big) {
+    font-size: 60px;
+    letter-spacing: 10px;
+  }
+  @include e(title) {
+    margin-bottom: 0;
+    font-family: $font-family--primary;
+  }
+  @include e(subtitle) {
+    font-size: 20px;
+    font-family: $font-family--secondary;
+  };
+  @include e(slogan) {
+    margin-left: 23%;
+  };
+}
+.max-container {
+  padding-top: 120px;
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.section {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding-bottom: 20px;
+  @include e(intro) {
+    h1 { color: $light-red; }
+  }
+  @include e(row) {
+    width: 100%;
+    padding: 10px 0;
+  };
+  @include e(header) {
+    font-size: $font-size--big;
+    font-family: $font-family--primary;
+  }
+  .publication {
+    @include e(container) {
+    };
+    @include e(card) {
+      display: block;
+      padding: 20px;
+      border: 2px solid #f0f0f0;
+      border-radius: 4px;
+      text-decoration: none;
+      color: $black;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      transition: all 0.2s linear;
+      &:hover {
+        color: $black;
+        opacity: .8;
+        border: 2px solid #f4f4f4;
+        box-shadow: 0 2px 30px #cfcdcd;
+        .publication__header {
+          text-decoration: underline;
+        }
+      }
+    };
+    @include e('header') {
+      margin-bottom: 10px;
+      text-align: center;
+      font-family: $font-family--primary;
+      color: $light-blue;
+      font-weight: 300;
+      transition: all 0.2s linear;
+    };
+    @include e(body){
+      font-family: $font-family--secondary;
+      line-height: 25px;
+    };
+  }
+  @include e('header') {
+    margin: 0;
+    text-align: center;
+    background-color: rgba($light-blue, .6);
+    border-radius: 6px;
+    color: $white;
+    padding: 10px 0;
+  };
+}
