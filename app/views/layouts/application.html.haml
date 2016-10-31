@@ -11,11 +11,11 @@
     / end
   %body{"ng-app" => "comuniapp"}
     %header.menu
-      .menu__row
+      .menu__column
         .menu__logo
           %a{"ui-sref" => "home"}
             = image_tag "logo.png"
-      %nav.menu__row
+      %nav.menu__column
         %ul
           %li.menu__link
             %a{"aria-label" => "Publicaciones", "ui-sref" => "publications-index"}
