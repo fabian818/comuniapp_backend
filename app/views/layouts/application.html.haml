@@ -10,20 +10,12 @@
     %link{:href => "http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css", :rel => "stylesheet"}/
     / end
   %body{"ng-app" => "comuniapp"}
-    %md-toolbar
-      .md-toolbar-tools
-        %span
-          %a{"ui-sref" => "home"} COMUNIDAD SAN LUISANA
-        %md-button.md-button{"aria-label" => "Publicaciones", "ui-sref" => "publications-index"}
-          Publicaciones
-        %md-button.md-button{"aria-label" => "Publicaciones", "ui-sref" => "questions-index"}
-          Preguntas
     %header.menu
       .menu__row
         .menu__logo
           %a{"ui-sref" => "home"}
-            = image_tag "logo.jpg"
-      .menu__row
+            = image_tag "logo.png"
+      %nav.menu__row
         %ul
           %li.menu__link
             %a{"aria-label" => "Publicaciones", "ui-sref" => "publications-index"}
@@ -31,7 +23,8 @@
           %li.menu__link
             %a{"aria-label" => "Publicaciones", "ui-sref" => "questions-index"}
               Preguntas
-    .main-view-container{"ui-view" => ""}
+    .max-container
+      .main-view-container{"ui-view" => ""}
     %script{:src => "http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"}
     %script{:src => "http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"}
     %script{:src => "http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"}
