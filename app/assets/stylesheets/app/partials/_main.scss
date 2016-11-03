@@ -51,14 +51,25 @@
     padding: 10px 0;
     z-index: 10;
     background: $white;
+    p { padding: 0 30px; }
   };
   @include e(header) {
+    height: 50px;
     font-size: $font-size--big;
     font-family: $font-family--primary;
   }
   .publication {
-    @include e(container) {
-    };
+    &__container__header {
+      margin: 20px 0 0 0;
+      font-family: $font-family--primary;
+      height: 28px;
+      text-align: center;
+      font-weight: 300;
+      background-color: $medium-blue;
+      color: $white;
+      padding: 10px 0;
+      h1 { margin: 0}
+    }
     @include e(card) {
       display: block;
       padding: 20px;
@@ -77,31 +88,38 @@
         color: $black;
         opacity: .8;
         border: 2px solid #f4f4f4;
-        box-shadow: 0 2px 30px #cfcdcd;
+        box-shadow: 0 2px 30px #928e8e;
         .publication__header {
           text-decoration: underline;
         }
       }
     };
-    @include e('header') {
-      margin-bottom: 10px;
-      text-align: center;
-      font-family: $font-family--primary;
-      color: $light-blue;
-      font-weight: 300;
-      transition: all 0.2s linear;
-    };
     @include e(body){
       font-family: $font-family--secondary;
       line-height: 25px;
     };
+    @include e('header') {
+      margin: 0;
+      font-family: $font-family--primary;
+      text-align: center;
+      font-weight: 300;
+      background-color: $white;
+      border-radius: 6px;
+      color: $light-blue;
+    };
   }
-  @include e('header') {
-    margin: 0;
-    text-align: center;
-    background-color: $medium-blue;
-    border-radius: 6px;
-    color: $white;
-    padding: 10px 0;
-  };
+  .publications {
+    &__header {
+      &__container {
+
+      }
+    }
+    &__body {
+      &__container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+      }
+    }
+  }
 }
