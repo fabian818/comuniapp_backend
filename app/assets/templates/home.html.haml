@@ -1,14 +1,15 @@
 %section.section.section__intro
+  = video_tag('bg-video.mp4', controls: false, autoplay: true, poster: 'bg-slg.jpg', loop: true)
   %h1.text__title.text--big
     COMUNIDAD SAN LUISANA
   %p.text__subtitle.text__slogan
     Lorem ipsum dolor sit amet, consectetur adipisicing elit,
 %section.section.publication
-  .section__row
-    %h1.section__header
+  .section__row.publication__container__header
+    %h1
       %i.fa.fa-list-alt
       Últimas publicaciones
-  .section__row.publication__container
+  .section__row.publication__header
     %ul.slider1
       %li
         %a.publication__card{"href"=>"#"}
@@ -53,8 +54,8 @@
           %p.publication__body
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, qu
 %section.section.guies
-  .section__row
-    %h1.section__header
+  .section__row.publication__container__header
+    %h1
       %i.fa.fa-list-alt
       Guias
   .section__row.publication__container

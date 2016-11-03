@@ -2,6 +2,7 @@
   @include m(big) {
     font-size: 60px;
     letter-spacing: 10px;
+    text-shadow: 0px 5px 20px black;
   }
   @include e(title) {
     margin-bottom: 0;
@@ -10,36 +11,65 @@
   @include e(subtitle) {
     font-size: 20px;
     font-family: $font-family--secondary;
+    text-shadow: 0px 0px 15px #393535;
   };
   @include e(slogan) {
     margin-left: 23%;
   };
 }
 .max-container {
-  padding-top: 120px;
-  width: 90%;
-  margin: 0 auto;
+  padding-top: 50px;
+  width: 100%;
   overflow: hidden;
 }
 .section {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
   padding-bottom: 20px;
   @include e(intro) {
-    h1 { color: $light-red; }
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    height: calc(100vh - 50px);
+    overflow: hidden;
+    video {
+      width: 100%;
+    }
+    h1 {
+      top: 30%;
+      color: $medium-blue;
+      position: absolute;
+    }
+    p {
+      position: absolute;
+      font-size: 25px;
+      color: white;
+      font-weight: bold;
+      top: 50%;
+    }
   }
   @include e(row) {
     width: 100%;
     padding: 10px 0;
+    z-index: 10;
+    background: $white;
+    p { padding: 0 30px; }
   };
   @include e(header) {
+    height: 50px;
     font-size: $font-size--big;
     font-family: $font-family--primary;
   }
   .publication {
-    @include e(container) {
-    };
+    &__container__header {
+      margin: 20px 0 0 0;
+      font-family: $font-family--primary;
+      height: 28px;
+      text-align: center;
+      font-weight: 300;
+      background-color: $medium-blue;
+      color: $white;
+      padding: 10px 0;
+      h1 { margin: 0}
+    }
     @include e(card) {
       display: block;
       padding: 20px;
@@ -58,31 +88,38 @@
         color: $black;
         opacity: .8;
         border: 2px solid #f4f4f4;
-        box-shadow: 0 2px 30px #cfcdcd;
+        box-shadow: 0 2px 30px #928e8e;
         .publication__header {
           text-decoration: underline;
         }
       }
     };
-    @include e('header') {
-      margin-bottom: 10px;
-      text-align: center;
-      font-family: $font-family--primary;
-      color: $light-blue;
-      font-weight: 300;
-      transition: all 0.2s linear;
-    };
     @include e(body){
       font-family: $font-family--secondary;
       line-height: 25px;
     };
+    @include e('header') {
+      margin: 0;
+      font-family: $font-family--primary;
+      text-align: center;
+      font-weight: 300;
+      background-color: $white;
+      border-radius: 6px;
+      color: $light-blue;
+    };
   }
-  @include e('header') {
-    margin: 0;
-    text-align: center;
-    background-color: rgba($light-blue, .6);
-    border-radius: 6px;
-    color: $white;
-    padding: 10px 0;
-  };
+  .publications {
+    &__header {
+      &__container {
+
+      }
+    }
+    &__body {
+      &__container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+      }
+    }
+  }
 }

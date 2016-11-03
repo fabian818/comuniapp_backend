@@ -4,10 +4,10 @@
   display: flex;
   flex-flow: row;
   justify-content: space-between;
-  height: 84px;
+  height: 50px;
   box-shadow: 0 2px 3px $light-grey;
   position: fixed;
-  z-index: 1001;
+  z-index: 10000;
   @include e(column) {
     width: 48%;
     display: flex;
@@ -39,14 +39,14 @@
   };
   @include e(logo) {
     width: 200px;
-    height: 100px;
+    height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s linear;
     a {
       img {
-        height: 80px;
+        height: 46px;
       }
     }
     &:hover {
