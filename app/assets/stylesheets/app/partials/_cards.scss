@@ -5,6 +5,7 @@
   &:hover {
     box-shadow: 0 2px 20px #c5c5c5;
     transform: translateY(-20px);
+    h2 { color: #FB8334; }
   }
   &__container {
     display: block;
@@ -13,8 +14,24 @@
     p { padding: 0;}
     box-shadow: 0 1px 3px 0 #D4D4D5, 0 0 0 1px #D4D4D5;
     text-decoration: none;
-    h2 { color: grey; }
-    span { color: #b1a8a8}
+    h2 {
+      color: grey;
+      font-weight: 300;
+    }
+    span {
+      color: #b1a8a8;
+      margin-bottom: 10px;
+    }
     p { color: #8c8181; }
+  }
+  &__body {
+    padding: 10px 0;
+  }
+  &__image {
+    width: 120px;
+    height: 100px;
+    float: left;
+    padding-right: 10px;
+    border-radius: 5px;
   }
 }
