@@ -21,6 +21,7 @@
   padding-top: 50px;
   width: 100%;
   overflow: hidden;
+  background-color: $white;
 }
 .section {
   padding-bottom: 20px;
@@ -54,12 +55,16 @@
     &.bg-grey {
       background-color: rgb(252, 252, 252);
     }
+    &--padded { padding: 30px; }
     p {
       padding: 0 30px;
       font-weight: 100;
       line-height: 25px;
     }
-    h1 { font-weight: 400; }
+    h1 {
+      font-weight: 400;
+      &.padded { padding-top: 30px; }
+    }
   };
   @include e(header) {
     height: 50px;
@@ -130,5 +135,21 @@
       }
     }
   }
-
+  .show-publication {
+    box-sizing: border-box;
+    padding: 10px 20px;
+    h1 { padding-top: 30px; }
+    img {
+      opacity: 0.6;
+      border-radius: 5px;
+      margin-right: 20px;
+      width: 300px;
+      height: 300px;
+      float: left;
+    }
+    p {
+      line-height: 40px;
+      letter-spacing: 1px;
+    }
+  }
 }
