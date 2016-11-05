@@ -14,20 +14,25 @@ angular.module('comuniapp', ['LocalStorageModule',
 	})
 
 	.state('publications-index', {
-		url: '/publications/index',
+		url: '/publications',
 		templateUrl:'publications/index.html',
 		controller: 'PublicationsIndexController',
 	})
+	.state('admin-publications-index', {
+		url: '/admin/publications',
+		templateUrl:'admin/publications/index.html',
+		controller: 'PublicationsIndexController',
+	})
 
-	.state('publications-edit', {
-		url: '/publications/edit/:publicationid',
-		templateUrl:'publications/edit.html',
+	.state('admin-publications-edit', {
+		url: '/admin/publications/edit/:publicationid',
+		templateUrl:'admin/publications/edit.html',
 		controller: 'PublicationsEditController'
 		})
 
-	.state('publications-new', {
-		url: '/publications/new',
-		templateUrl:'publications/new.html',
+	.state('admin-publications-new', {
+		url: '/admin/publications/new',
+		templateUrl:'admin/publications/new.html',
 		controller: 'PublicationsNewController',
 	})
 
@@ -37,33 +42,49 @@ angular.module('comuniapp', ['LocalStorageModule',
 		controller: 'PublicationsShowController'
 		})
 
+	.state('admin-publications-show', {
+		url: '/admin/publications/show/:publicationid',
+		templateUrl:'admin/publications/show.html',
+		controller: 'PublicationsShowController'
+	})
 
 	.state('questions-index', {
-		url: '/questions/index',
+		url: '/questions',
 		templateUrl:'questions/index.html',
 		controller: 'QuestionsIndexController',
 	})
 
-	.state('questions-edit', {
-		url: '/questions/edit/:questionid',
-		templateUrl:'questions/edit.html',
+	.state('admin-questions-index', {
+		url: '/admin/questions',
+		templateUrl:'admin/questions/index.html',
+		controller: 'QuestionsIndexController',
+	})
+
+	.state('admin-questions-edit', {
+		url: '/admin/questions/edit/:questionid',
+		templateUrl:'admin/questions/edit.html',
 		controller: 'QuestionsEditController'
 		})
 
-	.state('questions-new', {
-		url: '/questions/new',
-		templateUrl:'questions/new.html',
+	.state('admin-questions-new', {
+		url: '/admin/questions/new',
+		templateUrl:'admin/questions/new.html',
 		controller: 'QuestionsNewController',
 	})
+
+	.state('admin-questions-show', {
+		url: '/admin/questions/show/:questionid',
+		templateUrl:'admin/questions/show.html',
+		controller: 'QuestionsShowController'
+		})
 
 	.state('questions-show', {
 		url: '/questions/show/:questionid',
 		templateUrl:'questions/show.html',
 		controller: 'QuestionsShowController'
-		})
+	});
 
-
-	$urlRouterProvider.otherwise('/publications/index');
+	$urlRouterProvider.otherwise('/home');
 
 	$locationProvider.html5Mode({
 		enabled: true,
