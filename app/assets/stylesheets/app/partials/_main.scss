@@ -28,6 +28,7 @@
   display: flex;
   flex-flow: column wrap;
   align-items: center;
+  min-height: 429px;
   @include e(intro) {
     display: flex;
     flex-flow: column;
