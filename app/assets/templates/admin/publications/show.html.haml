@@ -1,0 +1,25 @@
+%md-subheader.md-no-sticky
+  %div{:layout => "row", :style => "display: table; overflow: hidden; margin-left: 400px;"}
+    %div{:flex => "10"}
+    %div{:flex => "40", :style => "display: table-cell; vertical-align: middle;"}
+      Vista detallada de la publicacion.
+    %div{:flex => "40"}
+      %md-button.md-raised.md-primary{"ui-sref" => "publications-index"} Regresar a lista de publicaciones
+    %div{:flex => "10"}
+%md-content.md-padding{:layout => "row", "layout-xs" => "column"}
+  %div{:flex => "25"}
+  %div{"flex-gt-xs" => "50", "flex-xs" => "", :layout => "column"}
+    %md-card
+      %md-card-title
+        %md-card-title-text{"layout-align" => "center center"}
+          %span.md-headline {{publication.title}}
+      %md-card-content
+        %h3 Cuerpo
+        %p {{publication.body}}
+      %md-card-content
+        %h3 Url de imagen
+        %p {{publication.image_url}}
+      %md-card-content
+        %h3 ¿Tiene imagen?
+        %p {{publication.has_image}}
+  %div{:flex => "25"}
