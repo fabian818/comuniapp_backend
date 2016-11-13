@@ -353,3 +353,12 @@
 .no-padding-left {
   padding-left: 0 !important;
 }
+.bg-light-blue {
+  background-color: $light-blue !important;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+.min-big-height {
+  min-height: 500px;
+}

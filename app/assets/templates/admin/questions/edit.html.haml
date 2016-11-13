@@ -1,24 +1,36 @@
-#body
-  %md-subheader.md-no-sticky
-    %div{:layout => "row", :style => "display: table; overflow: hidden; margin-left: 400px;"}
-      %div{:flex => "10"}
-      %div{:flex => "40", :style => "display: table-cell; vertical-align: middle;"}
-        Editar la guia seleccionada.
-      %div{:flex => "40"}
-        %md-button.md-raised.md-primary{"ui-sref" => "questions-index"} Regresar a lista de preguntas y guias
-      %div{:flex => "10"}
-  %form{"ng-submit" => "send()"}
-    %div{:layout => "row"}
-      %div{:flex => "25"}
-      %div{:flex => "50"}
-        %md-card.form-padding
-          %md-input-container.md-block
-            %label Titulo
-            %input{"ng-model" => "question.title"}/
-          %md-input-container.md-block
-            %label Respuesta
-            %textarea{"md-maxlength" => "500", "md-select-on-focus" => "", "ng-model" => "question.answer", :rows => "5"}
-          %br/
-          %div{:layout => "row"}
-            %md-button.md-raised.md-primary{:flex => "100", :type => "submit"} Modificar
-      %div{:flex => "25"}
+%section.section.admin.min-big-height
+  .admin__aside{"aside-admin"=>true}
+    .admin__aside__container
+      .admin__aside__close#close-aside
+        %i.fa.fa-times-circle-o
+      .admin__aside__row.no-padding-left
+        ADMIN PANEL
+      .admin__aside__row.bg-blue
+        %a{"ui-sref"=>"admin-publications-index"}
+          Publicaciones
+      .admin__aside__row.bg-blue
+        %a{"ui-sref"=>"admin-questions-index"}
+          Preguntas
+      .admin__aside__row.close-session.bg-blue
+        %a{:href => "#"}
+          Cerrar sesión
+  .section__row.bg-grey
+    %h1.text.text__title.admin__title
+      Editar Guia N° {{ question.id }}
+    %i.fa.fa-bars#open-aside
+  .section__row.bg-grey
+    %form{"ng-submit" => "send()"}
+      %div{:layout => "row"}
+        %div{:flex => "25"}
+        %div{:flex => "50"}
+          %md-card.form-padding
+            %md-input-container.md-block
+              %label Titulo
+              %input{"ng-model" => "question.title"}/
+            %md-input-container.md-block
+              %label Respuesta
+              %textarea{"md-maxlength" => "500", "md-select-on-focus" => "", "ng-model" => "question.answer", :rows => "5"}
+            %br/
+            %div{:layout => "row"}
+              %md-button.md-raised.md-primary.bg-light-blue{:flex => "100", :type => "submit"} Modificar
+        %div{:flex => "25"}
