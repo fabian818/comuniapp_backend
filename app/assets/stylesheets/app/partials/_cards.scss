@@ -2,8 +2,8 @@
   width: 30%;
   margin: 40px 0;
   transition: all 0.2s ease-in-out;
-  .publication__title { color: #FB8334; }
-  .answer__title { color: #9d9508;}
+  .publication__title { color: $light-orange; }
+  .answer__title { color: $yellow;}
   &:hover {
     box-shadow: 0 2px 20px #c5c5c5;
     transform: translateY(-20px);
