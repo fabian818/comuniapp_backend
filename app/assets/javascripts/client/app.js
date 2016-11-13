@@ -42,12 +42,6 @@ angular.module('comuniapp', ['LocalStorageModule',
 		controller: 'PublicationsShowController'
 		})
 
-	.state('admin-publications-show', {
-		url: '/admin/publications/show/:publicationid',
-		templateUrl:'admin/publications/show.html',
-		controller: 'PublicationsShowController'
-	})
-
 	.state('questions-index', {
 		url: '/questions',
 		templateUrl:'questions/index.html',
@@ -71,12 +65,6 @@ angular.module('comuniapp', ['LocalStorageModule',
 		templateUrl:'admin/questions/new.html',
 		controller: 'QuestionsNewController',
 	})
-
-	.state('admin-questions-show', {
-		url: '/admin/questions/show/:questionid',
-		templateUrl:'admin/questions/show.html',
-		controller: 'QuestionsShowController'
-		})
 
 	.state('questions-show', {
 		url: '/questions/:questionid',

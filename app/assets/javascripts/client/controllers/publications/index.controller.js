@@ -26,7 +26,7 @@
 
 		PublicationService.index(function(data){
 			$scope.publications = data.publications;
-		}); 
+		});
 		$scope.destroy = function(publication, ev){
 			var confirm = $mdDialog.confirm()
 			.title('¿Estas seguro que deseas eliminar este post?')
@@ -59,5 +59,17 @@
 					);
 			});
 		}
+		jQuery('#open-aside').on('click', function(){
+			$('.admin__aside').addClass('show');
+		});
+		jQuery('#close-aside').on('click', function(){
+			$('.admin__aside').removeClass('show');
+		});
+		jQuery('.admin__aside').on('click', function(){
+			$('.admin__aside').removeClass('show');
+		});
+		jQuery('.admin__aside__container').on('click', function(){
+			return false;
+		})
 	}]);
 })();
