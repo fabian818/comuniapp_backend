@@ -2,7 +2,6 @@
   @include m(big) {
     font-size: 60px;
     letter-spacing: 10px;
-    text-shadow: 0px 5px 20px black;
   }
   @include e(title) {
     margin-bottom: 0;
@@ -16,6 +15,15 @@
   @include e(slogan) {
     margin-left: 23%;
   };
+  &--grey {
+    color: #6e6e6e;
+  }
+  &--yellow {
+    color: $yellow;
+  }
+  &--orange {
+    color: $light-orange;
+  }
 }
 .max-container {
   padding-top: 50px;
@@ -35,18 +43,25 @@
     align-items: center;
     height: calc(100vh - 50px);
     overflow: hidden;
+    position: relative;
+    .bg__filter {
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      background-color: rgba(black, .6);
+      min-width: 100%;
+      min-height: 100%;
+    }
     video {
       width: 100%;
     }
     h1 {
       top: 30%;
-      color: $medium-blue;
       position: absolute;
     }
     p {
       position: absolute;
       font-size: 25px;
-      color: white;
       font-weight: bold;
       top: 50%;
     }
@@ -158,4 +173,7 @@
       letter-spacing: 1px;
     }
   }
+}
+.post__container {
+  min-height: 502px;
 }

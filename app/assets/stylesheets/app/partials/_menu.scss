@@ -5,7 +5,7 @@
   flex-flow: row;
   justify-content: space-between;
   height: 50px;
-  box-shadow: 0 2px 3px $light-grey;
+  box-shadow: 0 1px 3px $light-grey;
   position: fixed;
   z-index: 10000;
   @include e(column) {
