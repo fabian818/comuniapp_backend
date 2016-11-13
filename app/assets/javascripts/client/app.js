@@ -79,3 +79,24 @@ angular.module('comuniapp', ['LocalStorageModule',
 		requireBase: false
 	});
 }])
+.directive('asideAdmin', asideAdmin);
+
+function asideAdmin() {
+	return {
+		restrict: 'A',
+		link: function(){
+			jQuery('#open-aside').on('click', function(){
+				$('.admin__aside').addClass('show');
+			});
+			jQuery('#close-aside').on('click', function(){
+				$('.admin__aside').removeClass('show');
+			});
+			jQuery('.admin__aside').on('click', function(){
+				$('.admin__aside').removeClass('show');
+			});
+			jQuery('.admin__aside__container').on('click', function(){
+				return false;
+			})
+		}
+	}
+}
