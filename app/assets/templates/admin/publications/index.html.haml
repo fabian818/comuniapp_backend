@@ -1,5 +1,5 @@
 %section.section.admin
-  .admin__aside
+  .admin__aside{"aside-admin"=>true}
     .admin__aside__container
       .admin__aside__close#close-aside
         %i.fa.fa-times-circle-o
@@ -41,6 +41,6 @@
                 %i.fa.fa-pencil-square-o
                 Editar
             %td.action
-              %button.text.text__subtitle{"ng-click"=>"destroy(publication)"}
+              %button.text.text__subtitle{"ng-click"=>"destroy(publication, $event)"}
                 %i.fa.fa-trash-o
                 Eliminar
