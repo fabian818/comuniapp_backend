@@ -26,7 +26,7 @@
 
 		PublicationService.index(function(data){
 			$scope.publications = data.publications;
-		}); 
+		});
 		$scope.destroy = function(publication, ev){
 			var confirm = $mdDialog.confirm()
 			.title('¿Estas seguro que deseas eliminar este post?')

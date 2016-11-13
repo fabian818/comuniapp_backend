@@ -1,19 +1,17 @@
-%md-subheader.md-no-sticky
-  %div{:layout => "row", :style => "display: table; overflow: hidden; margin-left: 400px;"}
-    %div{:flex => "10"}
-    %div{:flex => "40", :style => "display: table-cell; vertical-align: middle;"}
-      Lista de guias y preguntas que aparecen en la app
-    %div{:flex => "40"}
-      %md-button.md-raised.md-primary{"ui-sref" => "questions-new"} Crear nueva guia
-    %div{:flex => "10"}
-%md-list{:flex => "", "ng-cloak" => ""}
-  %md-list-item{:layout => "row", "ng-repeat" => "question in questions"}
-    %div{:flex => "10"}
-    %div{:flex => "60"}
-      %md-button.md-primary.black{"ui-sref" => "questions-show({questionid: question.id})"} {{ question.title }}
-    %div{:flex => "10"}
-      %md-button.md-raised{"ui-sref" => "questions-edit({questionid: question.id})"} Editar
-    %div{:flex => "10"}
-      %md-button.md-fab{"aria-label" => "Eat cake", "ng-click" => "destroy(question, $event)"}
-        X
-    %div{:flex => "10"}
+%section.section
+  .section__row.bg-grey
+    %h1.padded.text--grey Guias y Preguntas
+  .section__row.publications__container.bg-grey
+    %p.publications__header__container
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    .publications__body__container
+      .card{"ng-repeat" => "question in questions"}
+        %a.card__container{"ui-sref" => "questions-show({questionid: question.id})"}
+          .card__header
+            %h2.answer__title
+              {{ question.title | uppercase }}
+            %span.publication__date
+              3 days ago...
+          .card__body
+            %p
+              {{ question.answer | limitTo: 100 }}...

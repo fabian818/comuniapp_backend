@@ -1,0 +1,41 @@
+%section.section.admin.min-big-height
+  .admin__aside{"aside-admin"=>true}
+    .admin__aside__container
+      .admin__aside__close#close-aside
+        %i.fa.fa-times-circle-o
+      .admin__aside__row.no-padding-left
+        ADMIN PANEL
+      .admin__aside__row.bg-blue
+        %a{"ui-sref"=>"admin-publications-index"}
+          Publicaciones
+      .admin__aside__row.bg-blue
+        %a{"ui-sref"=>"admin-questions-index"}
+          Preguntas
+      .admin__aside__row.close-session.bg-blue
+        %a{:href => "#"}
+          Cerrar sesión
+  .section__row.bg-grey
+    %h1.text.text__title.admin__title
+      Editar Publicación N° {{ publication.id }}
+    %i.fa.fa-bars#open-aside
+  .section__row.bg-grey
+    %form{"ng-submit" => "send()"}
+      %div{:layout => "row"}
+        %div{:flex => "25"}
+        %div{:flex => "50"}
+          %md-card.form-padding
+            %md-input-container.md-block
+              %label Titulo
+              %input{"ng-model" => "publication.title"}/
+            %md-input-container.md-block
+              %label Cuerpo
+              %textarea{"md-maxlength" => "500", "md-select-on-focus" => "", "ng-model" => "publication.body", :rows => "5"}
+            %md-input-container.md-block
+              %label Url de imagen
+              %input{"ng-model" => "publication.image_url"}/
+            %md-checkbox{"aria-label" => "Checkbox 1", "ng-model" => "publication.has_image"}
+              ¿Tiene imagen?
+            %br/
+            %div{:layout => "row"}
+              %md-button.md-raised.md-primary.bg-light-blue{:flex => "100", :type => "submit"} Modificar
+        %div{:flex => "25"}

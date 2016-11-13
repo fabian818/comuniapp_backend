@@ -1,0 +1,46 @@
+%section.section.admin.min-big-height
+  .admin__aside{"aside-admin"=>true}
+    .admin__aside__container
+      .admin__aside__close#close-aside
+        %i.fa.fa-times-circle-o
+      .admin__aside__row.no-padding-left
+        ADMIN PANEL
+      .admin__aside__row.bg-blue
+        %a{"ui-sref"=>"admin-publications-index"}
+          Publicaciones
+      .admin__aside__row.bg-blue
+        %a{"ui-sref"=>"admin-questions-index"}
+          Preguntas
+      .admin__aside__row.close-session.bg-blue
+        %a{:href => "#"}
+          Cerrar sesión
+  .section__row.bg-grey
+    %h1.text.text__title.admin__title
+      Lista de Publicaciones
+    %i.fa.fa-bars#open-aside
+  .section__row.admin__search.bg-grey
+    .search__container
+      %label Buscar
+      %input{"type"=>"text", "placeholder"=>"Titulo de la publicación", "ng-model"=>"search.title"}
+  .section__row.bg-grey
+    .admin__table__container
+      %table.admin__table.publications-list
+        %thead
+          %tr
+            %th
+              Título
+            %th{"colspan"=>"2"}
+              Acciones
+        %tbody
+          %tr{"ng-repeat" => "publication in publications | filter: search"}
+            %td
+              %a.text.text__subtitle{"ui-sref"=>"publications-show({publicationid: publication.id})", "target"=>"_blank"}
+                {{publication.title}}
+            %td.action
+              %a.text.text__subtitle{"ui-sref"=>"admin-publications-edit({publicationid: publication.id})"}
+                %i.fa.fa-pencil-square-o
+                Editar
+            %td.action
+              %button.text.text__subtitle{"ng-click"=>"destroy(publication, $event)"}
+                %i.fa.fa-trash-o
+                Eliminar
